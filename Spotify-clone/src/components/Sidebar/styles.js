@@ -1,13 +1,12 @@
 import styled from 'styled-components' 
 
 const SidebarContainer = styled.div`
-    
-    flex: 0.2; /** Le damos un 20% de la pantalla al sidebar */
+    //border: 1px solid red; /** para delimitar visualmente el sidebar  */
+    flex: 0.2; /** 20% de la pantalla al sidebar */
     height: 100vh;
     background-color: #000;
     min-width: 240px; /** anchura minima al variar el navegador */
     color: #fff;
-    //border: 1px solid red; /** para delimitar visualmente el sidebar  */
     & img{
         height: 40px;
         padding: 10px ;
@@ -31,8 +30,9 @@ const Choices = styled.div`
     align-items: center;
     color: gray;
     height: 40px;
-    cursor: pointer; // para cuando pasemos por encima se vea que se pueden clickar
+    cursor: pointer; // muestra una mano como puntero, opcion de click 
     transition: 200ms color ease-in; //tiempo que tarda el cambiar el color al posicionarnos encima
+    
     &:hover{
         color: #fff;
     }
@@ -40,7 +40,6 @@ const Choices = styled.div`
     & h5 {
         margin: 10px 0 0 20px ;
     }
-
 `
 
 

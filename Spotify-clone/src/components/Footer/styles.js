@@ -1,32 +1,30 @@
 import styled from 'styled-components' 
 
-
 const FooterContainer = styled.div `
-    position: fixed; //position fija
+    // border: 1px solid yellow;
+    position: fixed; //posicion fija
     bottom:0;
     height: 80px;
     width: 100vw;
-   // border: 1px solid yellow;
     background-color: #181818;
     color: #fff;
-    display: flex;
+    display: flex; // Ayuda a colocar las cajas como si fueran celdas de una tabla
     justify-content: space-between;
   
 `
 const FooterLeft = styled.div `
     //border: 1px solid white;
     flex:0.3;
-    display: flex;// Ayuda a colocar las cajas como si fueran celdas de una tabla
+    display: flex;
     max-width: 300px;
-    align-items: center; //alinea los tres elementos en el centro
+    align-items: center; 
 
     & img{
         //border: 1px solid red;
         width: 60px;
         height: 60px;
         padding: 8px;
-        object-fit: contain; //para asegurar que guarda las proporciones adecuadas
-
+        object-fit: contain; //asegura que guarda las proporciones adecuadas
     }
 
     & .info{
@@ -39,8 +37,8 @@ const FooterLeft = styled.div `
     & p{
         font-size: 14px;
         color: #fff;
-       
     }
+
     & .like{
        // border: 1px solid green;
         display: flex;
@@ -48,8 +46,6 @@ const FooterLeft = styled.div `
         color: #00ff00;
         height: 20px;
     }
-
-
 `
 const FooterCenter = styled.div `
     flex:0.4;
@@ -57,8 +53,6 @@ const FooterCenter = styled.div `
     align-items: center;
     justify-content: space-evenly;
     max-width: 300 px;
-
-
 `
 const FooterRight = styled.div `
     flex:0.3;
@@ -70,9 +64,6 @@ const FooterRight = styled.div `
     & .MuiSlider-root {
         color: #00ff00;
     }
-
-
-
 `
 
 

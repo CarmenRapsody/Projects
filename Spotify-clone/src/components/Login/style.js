@@ -1,16 +1,15 @@
 import styled from 'styled-components' 
 
-
 const LoginContainer = styled.div`
     display:grid;
     place-items: center;
     height: 100vh;
     background-color: #000;
+    
     & img{
         width: 100%;
         height: 100%;
     }
-
 `
 const LoginButton = styled.a`
     padding: 20px;

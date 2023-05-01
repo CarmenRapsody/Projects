@@ -4,7 +4,6 @@ import { loginURL } from '../spotyLogic'
 
 
 const Login = () => {
-  
   return (
     <div>
       <LoginContainer>

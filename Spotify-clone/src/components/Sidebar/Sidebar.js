@@ -1,14 +1,12 @@
 import React from 'react'
 import { SidebarContainer, Playlists} from './styles'
 
-/**Podrimos importar los iconos juntos, pero de cara aproduccion
- * aumenta el tamaño final resultante del proyecto
+/** Podrimos importar los iconos juntos, pero de cara a produccion
+ *  aumenta el tamaño final resultante del proyecto
  */
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon  from '@material-ui/icons/Search';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
-import FavoriteOutlinedIcon from '@material-ui/icons/FavoriteOutlined'
-
 import SidebarChoice from './SidebarChoice'
 
 

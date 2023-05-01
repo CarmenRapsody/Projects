@@ -9,11 +9,11 @@ const Header = () => {
     <HeaderContainer>
       <HeaderLeft>
           <SearchIcon/>
-          <input type="text" placeholder="Search for the same 5 song or wf u want"/>
+          <input type="text" placeholder="Search for the same 5 song"/>
       </HeaderLeft>
       <HeaderRight>
         <Avatar/>
-        <h4>C</h4>
+        <h4>Carmen R</h4>
   
       </HeaderRight>
     </HeaderContainer>

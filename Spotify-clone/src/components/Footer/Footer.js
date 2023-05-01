@@ -5,7 +5,6 @@ import ShuffleIcon from '@material-ui/icons/Shuffle'
 import SkipeviousIcon from '@material-ui/icons/SkipPrevious'
 import SkipNextIcon from '@material-ui/icons/SkipNext'
 import RepeatIcon from '@material-ui/icons/Repeat'
-
 import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay'
 import VolumenDownIcon from '@material-ui/icons/VolumeDown'
 import { Grid, Slider } from '@material-ui/core'
@@ -18,18 +17,18 @@ const Footer = () => {
       <FooterLeft> 
         <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Diamonds_-_Rihanna.png"/>
         <div className='info'>
-          <h4>Dayamons</h4>
-          <p>La Riri</p>
+          <h4>Diamonds</h4>
+          <p>Rihanna</p>
         </div>
         <FavoriteOutlinedIcon className='like'/>
       </FooterLeft>
       
       <FooterCenter>
-        <ShuffleIcon/>
-        <SkipeviousIcon/>
-        <PlayCircleOutlineIcon/>
-        <SkipNextIcon/>
-        <RepeatIcon/>  
+        <ShuffleIcon className="shuffle"/>
+        <SkipeviousIcon className="icon"/>
+        <PlayCircleOutlineIcon className="icon"/>
+        <SkipNextIcon className="icon"/>
+        <RepeatIcon className="repeat"/>  
       </FooterCenter>
 
       <FooterRight>
@@ -38,10 +37,8 @@ const Footer = () => {
               <Grid item><VolumenDownIcon/></Grid>
               <Grid item xs><Slider/></Grid>
              
-             
-             
-             {/**Para cambiar el color del slider podemos inspeccionar el codigo
-              desde el navegador para ver su nombre de */}
+             {/**Para cambiar el color del slider inspeccionamos el codigo
+              desde el navegador para ver su nombre de class */}
 
             </Grid>
       </FooterRight>

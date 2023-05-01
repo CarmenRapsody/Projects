@@ -12,16 +12,15 @@ import{ selectUser, SET_USER} from './features/UserSlice';
 import { selectPlaylist, SET_PLAYLIST } from './features/PlaylistSlice';
 
 
-const spotify = new SpotifyWebApi(); //esta var va a heredar todos los metodos de la API
+const spotify = new SpotifyWebApi(); //spotify hereda todos los metodos de la API
 
 function App() {
   const token = useSelector(selectToken) 
   const user = useSelector(selectUser)
-  const playlist = useSelector(selectPlaylist)  
   
   const dispatch = useDispatch() //inicializamos el hook
   {/** Una vez obtenido el token, ahora tenemos que hacer que 
-       la API de spoty nos devuelvo un usuario
+       la API de spoty nos devuelva un usuario
        instalamos la libreria: spotify-web-api-js
   */}
   
@@ -34,22 +33,20 @@ function App() {
     if(_token){
       dispatch(SET_TOKEN(_token))
       //queremos guardar token en el store, dispath es un hook,
-      //pero lo que vamos a despachar es el user no el token
-      spotify.setAccessToken(_token); //le pasamos el token al objeto
+      //pero lo que vamos a despachar es el user,no el token
+      spotify.setAccessToken(_token);
       spotify.getMe().then(user => dispatch(SET_USER(user)))
       console.log("dentro del if=> ",  _token) 
 
+      //Obtenemos la playlist usando su token
       spotify.getPlaylist("2iV8XXfovDYk4YAYWAItEE").then(playlist => 
         dispatch(SET_PLAYLIST(playlist)))
     }
-    
-  },[dispatch]); //el useEffect se carga cada vez que usemos el dispachat
+  },[dispatch]); //useEffect se carga cada vez que usemos el dispachat
 
 
   return (
     <div> 
-    {console.log("en el return ", token)} 
-    
     { 
       user ? <Player/> : <Login/>
     }
@@ -60,13 +57,12 @@ function App() {
 export default App;
 
 
-{/** Problema encontrado: React me renderizaba dos veces
+{/**  Problema encontrado: React me renderizaba dos veces
         el componente, duplicandome el token, y al ejecutar el 
-        useEffect, el token no se guardaba bien
+        useEffect, el token no se guardaba.
         
-    Solucion: El <Reac.StrictMode> del index.js ernderiza dos veces
-      los componentes, intencionadamente para ayudar a detectar errores
-      de la renderizacion. ELiminalo y deja solo la llamada 
-      a tu componente principal, en mi caso <App>
- 
+      Solucion: El <Reac.StrictMode> del index.js renderiza dos veces
+        los componentes, intencionadamente para ayudar a detectar errores
+        de la renderizacion. Eliminalo y deja solo la llamada 
+        al componente principal <App>.
 */}

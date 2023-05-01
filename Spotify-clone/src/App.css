@@ -1,0 +1,19 @@
+
+.shuffle, .repeat{
+    color: #00ff00;    
+}
+
+.shuffle:hover, .repeat:hover, .icon:hover{
+    transition: transform 200ms ease-in-out !important;
+    transform: scale(1.2) !important
+}
+
+.playButton{
+    margin: 20px 0 20px 50px;
+    transition: transform 200ms ease-in-out !important;
+}
+
+.playButton:hover{
+    transform: scale(1.1) !important;
+    cursor:pointer;
+}

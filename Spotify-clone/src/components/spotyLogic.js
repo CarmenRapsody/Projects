@@ -1,5 +1,5 @@
 
-/** Esta funcion va a extraer el token del usuarios de la url que nos facilita spoty */
+/** Esta funcion va a extraer el token del usuarios de la url que nos facilita la API de potify */
 export const getTokenFromURL = () => {
     return window.location.hash.substring(1).split("&")
    /**  
@@ -10,8 +10,8 @@ export const getTokenFromURL = () => {
             * Ej: Si tenemos "hello world":
                 substring(1, 4) --> retorna "ello"
                 substring(1) --> retorna "ello world"
-        - split divide un string en un array de cadenas, mediante la separacion "&"
-        de forma que convertimos le token de acceso en un array dividido por & 
+        - split --> divide un string en un array de cadenas, mediante la separacion "&"
+            de forma que convertimos le token de acceso en un array dividido por & 
     */ 
    
    .reduce((initial, item) => {
@@ -37,14 +37,14 @@ const scopes=["user-read-currently-playing",
 export const loginURL = `${endpoint}?client_id=${clientID}&response_type=token&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&show_dialog=true`
 
  
-//--- substring(1) --> access_token=BQCJDqhOhrK1mZnIGhUfNlGC64iiUielFJyDV5fdX9F6vnlkVFOST3-rUVrCIMckmEGwQm1B-v_0LOoSJMnEK7ElCfAIj_lu7VOhM9h-G99MVNVgkGJt-76igQE8WFuo8Fzi-IlIAwgZD5h9IEMHo9maZasorjyjIWBnaXR8bIdlg1H1lrdV63HcOuAt4VoPMH32vDDSq7KxO_g_U7bq8w&token_type=Bearer&expires_in=3600
+//--- substring(1) --> access_token=tokenaleatorioISUDFSKDJBFSDUFOSIDHFAAEIRUGWTERKJGB&token_type=Bearer&expires_in=3600
 //--- split("&") --> Descomponemos el string en cadenas de arrays que estaban separadas por &
 //---          Obteniendo
-//---              [" access_token = BQCJDqhOhrK1mZnIGhUfNlGC64iiUielFJyDV5fdX9F6vnlkVF…XR8bIdlg1H1lrdV63HcOuAt4VoPMH32vDDSq7KxO_g_U7bq8w",
+//---              [" access_token = tokenaleatorioISUDFSKDJBFSDUFOSIDHFAAEIRUGWTERKJGB",
 //---              "token_type=Bearer",
 // ---             "expires_in: '3600" ]
 
-//---- split ("=") --> Descomponemos el string en cadenas de arrays que estaban separadas por =
+//--- split ("=") --> Descomponemos el string en cadenas de arrays que estaban separadas por =
 //---                  Obteniendo:
-//----                  parts = [["access_token", ""], ["token_type", "Bearer"],["expires_in", "3600"]]
-//----                  parts[0] = ["access_token", ""]
+//---                  parts = [["access_token", ""], ["token_type", "Bearer"],["expires_in", "3600"]]
+//---                  parts[0] = ["access_token", ""]
